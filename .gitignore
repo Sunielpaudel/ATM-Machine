@@ -1,0 +1,16 @@
+# Ignore listed files and folders
+.vs/
+*.sln
+*.vcxproj*
+ATM Mnag.bd908299/
+x64/
+
+# Ignore other files if needed
+*.tmp
+*.log
+
+# Include only the specific files
+!main.cpp
+!atm.hpp
+!atm.cpp
+!accounts.dat
