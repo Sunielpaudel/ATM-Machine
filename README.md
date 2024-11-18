@@ -37,3 +37,7 @@ This project is built using C++ and demonstrates the use of object-oriented prog
 
 https://github.com/user-attachments/assets/d9aaf7c0-d38e-475e-81c9-7eb531d320bb
 
+## Author
+**. Kailash Paudel**
+
+**. 10897677@petalta.edu**
