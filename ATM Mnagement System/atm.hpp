@@ -6,11 +6,10 @@
 #include <vector>
 #include <string>
 
-
 namespace atmProject {
 
     // Enum for account type
-    enum class AccountType {
+    enum AccountType {
         Checking,
         Savings
     };
@@ -28,7 +27,7 @@ namespace atmProject {
             : accountNumber(accNum), accountHolderName(holder), password(pass), balance(bal), type(accType) {}
     };
 
-    // ATM class to manage the accounts and operations
+    // ATM struct to manage the accounts and operations
     struct ATM {
         std::vector<std::unique_ptr<Account>> accounts;
         int loggedInAccountIndex = -1;
@@ -36,17 +35,18 @@ namespace atmProject {
         // Function declarations
         void loadDataFromFile(const std::string& filename);
         void saveDataToFile(const std::string& filename);
-        void displayMenu();
-        bool login(int accountNumber, const std::string& password);
+        void displayCustomerMenu();
+        void displayAdminMenu();
+        bool loginCustomer(int accountNumber, const std::string& password);
         void checkBalance();
         void deposit();
         void withdraw();
         void transfer();
         void viewTransactionHistory();
-        void sortAccountsByBalance();  // Custom sorting function
-        void searchAccountByName();
-
+        void sortAccountsByBalance();  
+        void searchAccountByName();    
+        void searchAccountByBalance(); 
     };
 }
 
-#endif // ATM_HPP
+#endif ATM_HPP
