@@ -28,8 +28,9 @@ This project is built using C++ and demonstrates the use of object-oriented prog
 9. **Data Persistence**: All account details (including transactions) are saved in a file (`accounts.dat`) so that they persist between program runs.
 
 ## ScreenShots
-![Screenshot (29)](https://github.com/user-attachments/assets/315b6e80-2a17-422c-9a67-8c13f38b6afb)
-![Screenshot (30)](https://github.com/user-attachments/assets/14df2be6-c8cc-463f-b274-e67e310e1164)
+![Screenshot (34)](https://github.com/user-attachments/assets/98345e0c-b87e-4370-9b03-51079a3e3258)
+![Screenshot (35)](https://github.com/user-attachments/assets/423c2cf6-085f-47c5-a1c5-4d8ef3321aa3)
+
 
 ## Video
 
