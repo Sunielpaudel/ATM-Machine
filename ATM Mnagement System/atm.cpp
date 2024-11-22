@@ -4,6 +4,7 @@
 #include <limits>
 #include "atm.hpp"
 
+
 namespace atmProject {
 
     std::string trim(const std::string& str) {
@@ -26,7 +27,7 @@ namespace atmProject {
         AccountType type;
 
         while (file >> accNum) {
-            file.ignore();  
+            file.ignore();
             std::getline(file, holder);
             holder = trim(holder);
             if (holder.empty()) continue;
@@ -35,7 +36,7 @@ namespace atmProject {
             if (pass.empty()) continue;
 
             file >> balance;
-            file.ignore(); 
+            file.ignore();
 
             std::getline(file, typeStr);
             typeStr = trim(typeStr);
@@ -46,12 +47,12 @@ namespace atmProject {
             if (typeStr == "Checking") {
                 type = AccountType::Checking;
             }
-            else if (typeStr == "Savings" || typeStr == "Saving") {  
+            else if (typeStr == "Savings" || typeStr == "Saving") {
                 type = AccountType::Savings;
             }
             else {
                 std::cout << "Error: Unknown account type: '" << typeStr << "'\n";
-                continue;  
+                continue;
             }
 
             accounts.push_back(std::make_unique<Account>(accNum, holder, pass, balance, type));
@@ -105,12 +106,9 @@ namespace atmProject {
 
         std::string trimmedPassword = trim(password);
 
-        std::cout << "Trying to log in with account number: " << accountNumber << " and password: " << trimmedPassword << "\n";
-
         for (size_t i = 0; i < accounts.size(); ++i) {
             std::string accountPassword = trim(accounts[i]->password);  // Trim password from file
 
-            std::cout << "Checking account " << accounts[i]->accountNumber << " with password: " << accountPassword << "\n";
             if (accounts[i]->accountNumber == accountNumber && accountPassword == trimmedPassword) {
                 loggedInAccountIndex = i;
                 std::cout << "Login successful.\n";
@@ -230,6 +228,11 @@ namespace atmProject {
     }
 
     // Function to search accounts by name
+
+    
+
+   
+
     void ATM::searchAccountByName() {
         std::string name;
         std::cout << "Enter name to search: ";
